@@ -1,12 +1,10 @@
-from flask import Flask, send_from_directory
+from flask import Flask
+from flask.helpers import send_from_directory
 from flask_cors import CORS, cross_origin
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./output", static_url_path="")
 
-CORS(
-    app,
-    supports_credentials=True
-)
+CORS(app)
 
 
 @app.route("/api")
@@ -20,9 +18,7 @@ def index():
 @app.route('/')
 @cross_origin()
 def serve():
-    return {
-        "serve": "The first page"
-    }
+    return send_from_directory(app.static_folder, "index.html")
 # def serve():
 #     # return {
 #     #     "indexPage": "Here is the index"

@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [state, setState] = useState()
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api").then(response => {
+    fetch("http://localhost:5000/api").then(response => {
       if (response.status === 200) {
         return response.json()
       }

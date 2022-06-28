@@ -1,1 +1,1 @@
-web: npm run start & gunicorn app:app
+web: gunicorn app:app
