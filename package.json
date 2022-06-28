@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build && next export -o output",
     "start": "next start -p 8000",
+    "all": "npm run build && python app.py",
     "lint": "next lint"
   },
   "dependencies": {

@@ -9,9 +9,17 @@ CORS(app)
 
 @app.route("/api")
 @cross_origin()
-def index():
+def true():
     return {
         "tutorial": "true eye"
+    }
+
+
+@app.route("/api_false")
+@cross_origin()
+def false():
+    return {
+        "tutorial": "false eye"
     }
 
 
