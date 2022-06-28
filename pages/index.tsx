@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [state, setState] = useState()
 
   useEffect(() => {
-    fetch("http://localhost:5000/api").then(response => {
+    fetch("https://true-eye.herokuapp.com//api").then(response => {
       if (response.status === 200) {
         return response.json()
       }
